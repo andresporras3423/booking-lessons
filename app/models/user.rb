@@ -3,6 +3,7 @@ class User < ApplicationRecord
     belongs_to :role
     belongs_to :city
     validates :email, uniqueness: true
+    validates :email, uniqueness: true
   
     def self.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
