@@ -10,7 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_164335) do
+ActiveRecord::Schema.define(version: 2020_06_01_172226) do
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.integer "country_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "cod"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "tutor_id"
+    t.date "day"
+    t.integer "begin_hour"
+    t.integer "finish_hour"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -19,6 +49,8 @@ ActiveRecord::Schema.define(version: 2020_05_29_164335) do
     t.string "remember_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "city_id"
+    t.integer "role_id"
   end
 
 end
