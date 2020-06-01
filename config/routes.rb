@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get  '/sessions/delete',  to: 'sessions#destroy'
 
   post  '/users/create',  to: 'users#create'
+
+  get  '/cities/show',  to: 'cities#show'
+  get  '/countries/show',  to: 'countries#show'
 end
