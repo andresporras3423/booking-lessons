@@ -30,11 +30,14 @@ module SessionsHelper
     #   cookies[:remember_token] = nil
     #   @current_user = nil
     # end
+    @user=nil
   
     def restrict_access
-        user = User.find_by_email(params[:email])
-        unless user&.authenticated?(params[:remember_token])
+        @user = User.find_by_email(params[:email])
+        unless @user&.authenticated?(params[:remember_token])
+            @user=nil
             head(:not_found)
         end
+
     end
   end

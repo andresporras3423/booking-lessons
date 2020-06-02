@@ -2,6 +2,7 @@ class User < ApplicationRecord
     has_secure_password
     belongs_to :role
     belongs_to :city
+    has_many :user_subjects
     validates :email, uniqueness: true
     validates :email, uniqueness: true
   
