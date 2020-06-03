@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   post  '/users/create',  to: 'users#create'
   post  '/users/update_subjects',  to: 'users#update_subjects'
+  get  '/users/show_tutors',  to: 'users#show_tutors'
 
   get  '/cities/show',  to: 'cities#show'
   get  '/countries/show',  to: 'countries#show'
