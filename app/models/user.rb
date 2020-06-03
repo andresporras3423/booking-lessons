@@ -2,8 +2,7 @@ class User < ApplicationRecord
     has_secure_password
     belongs_to :role
     belongs_to :city
-    has_many :user_subjects
-    validates :email, uniqueness: true
+    has_many :userSubjects
     validates :email, uniqueness: true
   
     def self.digest(string)

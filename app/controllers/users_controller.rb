@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :restrict_access, only: %i[update_subjects show_tutors]
+    before_action :restrict_access, only: %i[update_subjects show_tutors show_tutors_by_lesson]
     def create
         user = User.create(name: params[:name], email: params[:email], password: params[:password], 
             password_confirmation: params[:password_confirmation], city_id: params[:city_id], role_id: params[:role_id])
@@ -23,8 +23,13 @@ class UsersController < ApplicationController
     end
 
     def show_tutors
-        p "current user is #{@user.name}"
         tutors = User.all.select{|t | t.role.name=='tutor' && t.city_id==@user.city_id}
+        render json: tutors.as_json(only: [:id, :email, :name]), status: :ok
+    end
+
+    def show_tutors_by_lesson
+        p "subject_id params: #{params[:subject_id]}"
+        tutors = User.all.select{|t | t.role.name=='tutor' && t.city_id==@user.city_id && t.userSubjects.any?{|us| params[:subject_id]==us.subject_id}}
         render json: tutors.as_json(only: [:id, :email, :name]), status: :ok
     end
 end

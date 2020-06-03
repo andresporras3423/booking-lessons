@@ -9,4 +9,4 @@ module CitiesHelper
          @country_code = country_code
        end
      end
-  end
+end
