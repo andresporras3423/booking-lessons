@@ -3,7 +3,12 @@ class User < ApplicationRecord
     belongs_to :role
     belongs_to :city
     has_many :userSubjects
+    has_many :lessons
     validates :email, uniqueness: true
+
+    def tutorLessons
+      Lesson.all.select{|le| le.tutor_id==self.id}
+    end
   
     def self.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
     before_action :restrict_access, only: %i[create]
     def create
-        lesson = Lesson.create(user_id: @user.id, tutor_id: params[:tutor_id], day: params[:day], 
+        lesson = Lesson.new(user_id: @user.id, tutor_id: params[:tutor_id], day: params[:day], 
             begin_hour: params[:begin_hour], finish_hour: params[:finish_hour], subject_id: params[:subject_id], 
             city_id: @user.city_id)
         if lesson.valid?
