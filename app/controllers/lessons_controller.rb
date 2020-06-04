@@ -14,7 +14,7 @@ class LessonsController < ApplicationController
                 "subject": lesson_helper.subject_name, "city": lesson_helper.city_name}] , status: :created
             #render json: user.as_json(only: [:id, :email, :name, :remember_token]), status: :created
         else
-            head(:unauthorized)
+            render json: lesson.errors.messages, status: :conflict
         end
     end
 end

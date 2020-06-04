@@ -15,10 +15,11 @@ class UsersController < ApplicationController
 
     def update_subjects
         sub_ids = params[:sub_ids]
-        @user.user_subjects.each{|us| us.destroy}
+        @user.userSubjects.each{|us| us.destroy}
         user_subjects = sub_ids.split(",").map do |s_id|
             UserSubject.create(user_id: @user.id, subject_id: s_id.to_i)
         end
+        render json: JSON[{"status": "created"}], status: :created
         # UserSubject.create(user_subjects)
     end
 
