@@ -4,7 +4,7 @@ class Lesson < ApplicationRecord
     belongs_to :user
     belongs_to :tutor, class_name: 'User', foreign_key: 'tutor_id'
     belongs_to :subject
-    validate :no_overlap_tutor_lesson, :no_overlap_student_lesson
+    validate :no_overlap_tutor_lesson, :no_overlap_student_lesson, :valid_begin_hour, :valid_finish_hour, :finish_after_begin
     validate :tutor_is_tutor, :student_tutor_different_users, :is_tutor_subject, :is_future_date
     
     private
@@ -45,6 +45,24 @@ class Lesson < ApplicationRecord
         #p "passed validation was #{throw_error}"
         if throw_error
             errors.add(:base, message: "lesson cannot overlap with another students's lesson")
+        end
+    end
+
+    def valid_begin_hour
+        if begin_hour<0 || begin_hour>23
+            errors.add(:begin_hour, message: "begin hour must be a number between 0 and 23")
+        end
+    end
+
+    def valid_finish_hour
+        if finish_hour<1 || finish_hour>24
+            errors.add(:finish_hour, message: "finish hour must be a number between 1 and 24")
+        end
+    end
+
+    def finish_after_begin
+        if finish_hour<=begin_hour
+            errors.add(:base, message: "finish hour must be bigger than begin hour")
         end
     end
 end
