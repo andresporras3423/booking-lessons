@@ -5,7 +5,7 @@ class Lesson < ApplicationRecord
     belongs_to :tutor, class_name: 'User', foreign_key: 'tutor_id'
     belongs_to :subject
     validate :no_overlap_tutor_lesson, :no_overlap_student_lesson, :valid_begin_hour, :valid_finish_hour, :finish_after_begin
-    validate :tutor_is_tutor, :student_tutor_different_users, :is_tutor_subject, :is_future_date
+    validate :tutor_is_tutor, :student_tutor_different_users, :is_tutor_subject
     
     private
     def student_tutor_different_users
@@ -26,11 +26,11 @@ class Lesson < ApplicationRecord
         end
     end
 
-    def is_future_date
-        if day<Date.today
-            errors.add(:base, message: "lesson must occur in the future")
-        end
-    end
+    # def is_future_date
+    #     if day<Date.today
+    #         errors.add(:base, message: "lesson must occur in the future")
+    #     end
+    # end
 
     def no_overlap_tutor_lesson
         throw_error = User.all.find(tutor_id).tutorLessons.any?{|le| le.day.to_date == day.to_date && ((le.begin_hour>=begin_hour && le.begin_hour<finish_hour) || (le.finish_hour<=finish_hour && le.finish_hour>begin_hour))}

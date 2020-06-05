@@ -3,6 +3,7 @@ class User < ApplicationRecord
     belongs_to :role
     belongs_to :city
     has_many :userSubjects
+    has_many :subjects, :through => :userSubjects
     has_many :lessons
     has_many :tutorLessons
     validates :email, uniqueness: true

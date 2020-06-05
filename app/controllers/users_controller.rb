@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :restrict_access, only: %i[update_subjects show_tutors show_tutors_by_lesson]
+    before_action :restrict_access, only: %i[update_subjects show_tutors show_tutors_by_lesson show_past_lessons show_today_lessons show_future_lessons]
     def create
         user = User.create(name: params[:name], email: params[:email], password: params[:password], 
             password_confirmation: params[:password_confirmation], city_id: params[:city_id], role_id: params[:role_id])
@@ -32,5 +32,23 @@ class UsersController < ApplicationController
         p "subject_id params: #{params[:subject_id]}"
         tutors = User.all.select{|t | t.role.name=='tutor' && t.city_id==@user.city_id && t.userSubjects.any?{|us| params[:subject_id]==us.subject_id}}
         render json: tutors.as_json(only: [:id, :email, :name]), status: :ok
+    end
+
+    def show_past_lessons
+        lessons = @user.lessons
+        lessons_helper = lessons.select{|le| le.day<Date.today}
+        render json: lessons_helper, status: :ok
+    end
+
+    def show_today_lessons
+        lessons = @user.lessons
+        lessons_helper = lessons.select{|le| le.day==Date.today}
+        render json: lessons_helper, status: :ok
+    end
+
+    def show_future_lessons
+        lessons = @user.lessons
+        lessons_helper = lessons.select{|le| le.day>Date.today}
+        render json: lessons_helper, status: :ok
     end
 end

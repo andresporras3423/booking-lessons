@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
     before_action :restrict_access, only: %i[create get_student_lessons get_tutor_lessons]
+    before_action :only_students, only: %i[create]
     def create
         lesson = Lesson.new(user_id: @user.id, tutor_id: params[:tutor_id], day: params[:day], 
             begin_hour: params[:begin_hour], finish_hour: params[:finish_hour], subject_id: params[:subject_id], 
