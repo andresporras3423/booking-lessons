@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get  '/subjects/show',  to: 'subjects#show'
 
   post  '/lessons/create',  to: 'lessons#create'
+  get '/lessons/get_student_lessons', to: 'lessons#get_student_lessons'
+  get '/lessons/get_tutor_lessons', to: 'lessons#get_tutor_lessons'
 end

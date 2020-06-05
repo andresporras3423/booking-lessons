@@ -36,7 +36,7 @@ module SessionsHelper
         @user = User.find_by_email(params[:email])
         unless @user&.authenticated?(params[:remember_token])
             @user=nil
-            head(:not_found)
+            head(:unauthorized)
         end
 
     end

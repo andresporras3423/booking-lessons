@@ -4,6 +4,7 @@ class User < ApplicationRecord
     belongs_to :city
     has_many :userSubjects
     has_many :lessons
+    has_many :tutorLessons
     validates :email, uniqueness: true
 
     def tutorLessons
