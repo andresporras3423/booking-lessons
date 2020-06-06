@@ -1,15 +1,38 @@
 class UsersController < ApplicationController
-    before_action :restrict_access, only: %i[update_subjects show_tutors show_tutors_by_lesson show_past_lessons show_today_lessons show_future_lessons]
+    before_action :restrict_access, only: %i[update update_subjects show_tutors show_tutors_by_lesson show_past_lessons show_today_lessons show_future_lessons update_password]
     def create
         user = User.create(name: params[:name], email: params[:email], password: params[:password], 
             password_confirmation: params[:password_confirmation], city_id: params[:city_id], role_id: params[:role_id])
-        p "name: #{user.name}, email: #{user.email}, city_id: #{user.city_id}, role_id: #{user.role_id}"
         if user.valid?
             user.record_signup
             user.save
             render json: user.as_json(only: [:id, :email, :name, :remember_token]), status: :created
         else
-            head(:unauthorized)
+            render json: user.errors.messages, status: :conflict
+        end
+    end
+
+    def update
+        @user.name = params[:name].nil? ? @user.name : params[:name]
+        @user.email = params[:new_email].nil? ? @user.email : params[:new_email]
+        @user.city_id = params[:city_id].nil? ? @user.city_id : params[:city_id]
+        if @user.valid?
+            @user.save
+            render json:  @user.as_json(only: [:id, :email, :name]), status: :accepted
+        else
+            render json: @user.errors.messages, status: :conflict
+        end
+    end
+
+    def update_password
+        @user.password = params[:password]
+        @user.password_confirmation = params[:password_confirmation]
+        if @user.valid?
+            @user.record_signup
+            @user.save
+            render json: @user.as_json(only: [:id, :email, :name, :remember_token]), status: :accepted
+        else
+            render json: @user.errors.messages, status: :conflict
         end
     end
 
@@ -19,7 +42,7 @@ class UsersController < ApplicationController
         user_subjects = sub_ids.split(",").map do |s_id|
             UserSubject.create(user_id: @user.id, subject_id: s_id.to_i)
         end
-        render json: JSON[{"status": "created"}], status: :created
+        render json: JSON[{"status": "updated"}], status: :accepted
         # UserSubject.create(user_subjects)
     end
 

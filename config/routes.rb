@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   delete  '/sessions/delete',  to: 'sessions#destroy'
 
   post  '/users/create',  to: 'users#create'
-  post  '/users/update_subjects',  to: 'users#update_subjects'
+  put  '/users/update',  to: 'users#update'
+  put  '/users/update_password',  to: 'users#update_password'
+  put  '/users/update_subjects',  to: 'users#update_subjects'
   get  '/users/show_tutors',  to: 'users#show_tutors'
   get  '/users/show_tutors_by_lesson',  to: 'users#show_tutors_by_lesson'
   get  '/users/show_past_lessons',  to: 'users#show_past_lessons'
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
   post  '/lessons/create',  to: 'lessons#create'
   get '/lessons/get_student_lessons', to: 'lessons#get_student_lessons'
   get '/lessons/get_tutor_lessons', to: 'lessons#get_tutor_lessons'
+  put '/lessons/update', to: 'lessons#update'
+  delete '/lessons/delete', to: 'lessons#delete'
 
   get  '/tutors/show_past_lessons',  to: 'tutors#show_past_lessons'
   get  '/tutors/show_today_lessons',  to: 'tutors#show_today_lessons'
