@@ -7,6 +7,7 @@ class User < ApplicationRecord
     has_many :lessons
     has_many :tutorLessons
     validates :email, uniqueness: true
+    validates :password, length: { minimum:4}
 
     def tutorLessons
       Lesson.all.select{|le| le.tutor_id==self.id}
