@@ -4,8 +4,7 @@ class Lesson < ApplicationRecord
     belongs_to :user
     belongs_to :tutor, class_name: 'User', foreign_key: 'tutor_id'
     belongs_to :subject
-    validate :no_overlap_tutor_lesson, :no_overlap_student_lesson, :valid_begin_hour, :valid_finish_hour, :finish_after_begin
-    validate :tutor_is_tutor, :student_tutor_different_users, :is_tutor_subject
+    validate :student_is_student, :tutor_is_tutor, :student_tutor_different_users, :is_tutor_subject, :no_overlap_tutor_lesson, :no_overlap_student_lesson, :valid_begin_hour, :valid_finish_hour, :finish_after_begin
     
     private
     def student_tutor_different_users
@@ -21,8 +20,16 @@ class Lesson < ApplicationRecord
     end
 
     def tutor_is_tutor
-        if User.all.find(tutor_id).role_id != Role.find_by_name("tutor").id
+        tutor = User.all.find(tutor_id)
+        return if tutor.nil?
+        if tutor.role_id != Role.find_by_name("tutor").id
             errors.add(:base, message: "tutor must be the tutor's role")
+        end
+    end
+
+    def student_is_student
+        if User.all.find(user_id).role_id != Role.find_by_name("student").id
+            errors.add(:base, message: "student must be the tutor's role")
         end
     end
 
@@ -33,7 +40,9 @@ class Lesson < ApplicationRecord
     # end
 
     def no_overlap_tutor_lesson
-        throw_error = User.all.find(tutor_id).tutorLessons.any?{|le| le.day.to_date == day.to_date && ((le.begin_hour>=begin_hour && le.begin_hour<finish_hour) || (le.finish_hour<=finish_hour && le.finish_hour>begin_hour)) && le.id!=id}
+        tutor = User.all.find(tutor_id)
+        return if tutor.nil?
+        throw_error = tutor.tutorLessons.any?{|le| le.day.to_date == day.to_date && ((le.begin_hour>=begin_hour && le.begin_hour<finish_hour) || (le.finish_hour<=finish_hour && le.finish_hour>begin_hour)) && le.id!=id}
         #p "passed validation was #{throw_error}"
         if throw_error
             errors.add(:base, message: "lesson cannot overlap with another tutor's lesson")
@@ -41,7 +50,9 @@ class Lesson < ApplicationRecord
     end
 
     def no_overlap_student_lesson
-        throw_error = User.all.find(user_id).lessons.any?{|le| le.day.to_date == day.to_date && ((le.begin_hour>=begin_hour && le.begin_hour<finish_hour) || (le.finish_hour<=finish_hour && le.finish_hour>begin_hour))  && le.id!=id}
+        student = User.all.find(user_id)
+        return if student.nil?
+        throw_error = student.lessons.any?{|le| le.day.to_date == day.to_date && ((le.begin_hour>=begin_hour && le.begin_hour<finish_hour) || (le.finish_hour<=finish_hour && le.finish_hour>begin_hour))  && le.id!=id}
         #p "passed validation was #{throw_error}"
         if throw_error
             errors.add(:base, message: "lesson cannot overlap with another students's lesson")

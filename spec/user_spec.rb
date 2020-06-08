@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe User, type: :model do
   context 'user model creation' do

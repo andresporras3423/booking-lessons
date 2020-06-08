@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe Subject, type: :model do
   context 'Subject model creation' do

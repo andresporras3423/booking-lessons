@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe UserSubject, type: :model do
   context 'UserSubject model creation' do
@@ -9,7 +8,7 @@ RSpec.describe UserSubject, type: :model do
     end
 
     it 'invalid UserSubject by noexisting user_id' do
-      us2 = UserSubject.new(user_id: 2, subject_id: 1)
+      us2 = UserSubject.new(user_id: 10, subject_id: 1)
       expect(us2.valid?).to eq(false)
     end
 

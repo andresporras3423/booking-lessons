@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe Country, type: :model do
   context 'Country model creation' do

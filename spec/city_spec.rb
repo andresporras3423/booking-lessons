@@ -1,12 +1,10 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe City, type: :model do
   context 'City model creation' do
     let(:c1) { City.new(name: 'Medellín', country_id: 2) }
     
     it 'valid City' do
-      p Role.all
       expect(c1.valid?).to eq(true)
     end
 

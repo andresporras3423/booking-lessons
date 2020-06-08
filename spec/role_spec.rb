@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'before_spec'
 
 RSpec.describe Role, type: :model do
   context 'role model creation' do
