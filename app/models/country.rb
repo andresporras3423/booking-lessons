@@ -1,5 +1,5 @@
 class Country < ApplicationRecord
-    validates :name, uniqueness: true
-    validates :cod, uniqueness: true
-    has_many :cities
+    validates :name, uniqueness: true, length: { minimum:1}
+    validates :cod, uniqueness: true, length: { minimum:1}
+    has_many :cities 
 end

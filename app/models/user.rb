@@ -6,8 +6,12 @@ class User < ApplicationRecord
     has_many :subjects, :through => :userSubjects
     has_many :lessons
     has_many :tutorLessons
-    validates :email, uniqueness: true
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
+    validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
     validates :password, length: { minimum:4}
+    validates :name, length: { minimum:1}
 
     def tutorLessons
       Lesson.all.select{|le| le.tutor_id==self.id}

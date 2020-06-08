@@ -11,7 +11,7 @@ class Lesson < ApplicationRecord
     def student_tutor_different_users
         if user_id==tutor_id
             errors.add(:base, message: "student and tutor cannot be the same person")
-          end
+        end
     end
 
     def is_tutor_subject

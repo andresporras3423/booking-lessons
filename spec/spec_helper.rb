@@ -14,6 +14,45 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.before(:all) { 
+      @country1 = Country.new(name: 'Colombia', cod: 'COL')
+      @country1.save
+    
+      @country2 = Country.new(name: 'Argentina', cod: 'ARG')
+      @country2.save
+    
+      @country3 = Country.new(name: 'America', cod: 'USA')
+      @country3.save
+    
+      @city1 = City.new(name: 'Bogotá', country_id: @country1.id)
+      @city1.save
+    
+      @city2 = City.new(name: 'Buenos Aires', country_id: @country2.id)
+      @city2.save
+    
+      @city3 = City.new(name: 'Miami', country_id: @country3.id)
+      @city3.save
+    
+      @role1 = Role.new(name: 'student')
+      @role1.save
+    
+      @role2 = Role.new(name: 'tutor')
+      @role2.save
+    
+      @role3 = Role.new(name: 'administrator')
+      @role3.save
+    
+    
+      @subject1 = Subject.new(name: 'spanish')
+      @subject1.save
+    
+      @subject2 = Subject.new(name: 'english')
+      @subject2.save
+    
+      @user1 = User.create(name: 'a1', email: 'a1@a1.com', password: '12345678', password_confirmation: '12345678', role_id:1, city_id:1)
+    
+  }
+  
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
