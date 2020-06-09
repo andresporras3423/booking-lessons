@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Role, type: :model do
@@ -16,7 +18,7 @@ RSpec.describe Role, type: :model do
     end
 
     it 'invalid role by short name' do
-        r2 = Role.new(name: '')
+      r2 = Role.new(name: '')
       expect(r2.valid?).to eq(false)
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Country, type: :model do
@@ -16,17 +18,17 @@ RSpec.describe Country, type: :model do
     end
 
     it 'invalid country by existing cod' do
-        c2 = Country.new(name: 'Columbia', cod: 'COL')
-        expect(c2.valid?).to eq(false)
-      end
+      c2 = Country.new(name: 'Columbia', cod: 'COL')
+      expect(c2.valid?).to eq(false)
+    end
 
     it 'invalid country by short name' do
-        c2 = Country.new(name: '', cod: 'CL')
+      c2 = Country.new(name: '', cod: 'CL')
       expect(c2.valid?).to eq(false)
     end
 
     it 'invalid country by short cod' do
-        c2 = Country.new(name: 'Columbia', cod: '')
+      c2 = Country.new(name: 'Columbia', cod: '')
       expect(c2.valid?).to eq(false)
     end
   end

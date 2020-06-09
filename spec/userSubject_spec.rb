@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe UserSubject, type: :model do
@@ -13,7 +15,7 @@ RSpec.describe UserSubject, type: :model do
     end
 
     it 'invalid UserSubject by nonexisting subject_id' do
-        us2 = UserSubject.new(user_id: 1, subject_id: 5)
+      us2 = UserSubject.new(user_id: 1, subject_id: 5)
       expect(us2.valid?).to eq(false)
     end
   end

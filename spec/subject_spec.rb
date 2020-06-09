@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Subject, type: :model do
   context 'Subject model creation' do
     let(:s1) { Subject.new(name: 'programming') }
     it 'valid Subject' do
-        #p Subject.all
+      # p Subject.all
       expect(s1.valid?).to eq(true)
     end
 
@@ -14,7 +16,7 @@ RSpec.describe Subject, type: :model do
     end
 
     it 'invalid Subject by short name' do
-        s2 = Subject.new(name: '')
+      s2 = Subject.new(name: '')
       expect(s2.valid?).to eq(false)
     end
   end
