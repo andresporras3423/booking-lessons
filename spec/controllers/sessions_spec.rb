@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 
-  describe "POST #create" do
+  describe "SessionsController actions" do
     before(:each) do
         post :create, params: {email: "a1@a1.com", password: "12345678" }
          @rt = JSON.parse(response.body)["remember_token"]

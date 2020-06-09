@@ -59,14 +59,16 @@ RSpec.configure do |config|
       @tutor4 = User.create(name: 'b4', email: 'b4@b4.com', password: 'asdf1234', password_confirmation: 'asdf1234', role_id:2, city_id:2)
       @tutor4.save
 
-      @userSubject1 = UserSubject.new(user_id: 5, subject_id: 1)
+      @userSubject1 = UserSubject.new(user_id: @tutor1.id, subject_id: 1)
       @userSubject1.save
-      @userSubject2 = UserSubject.new(user_id: 6, subject_id: 1)
+      @userSubject2 = UserSubject.new(user_id: @tutor2.id, subject_id: 1)
       @userSubject2.save
-      @userSubject3 = UserSubject.new(user_id: 7, subject_id: 1)
+      @userSubject3 = UserSubject.new(user_id: @tutor3.id, subject_id: 1)
       @userSubject3.save
-      @userSubject4 = UserSubject.new(user_id: 8, subject_id: 1)
+      @userSubject4 = UserSubject.new(user_id: @tutor4.id, subject_id: 1)
       @userSubject4.save
+      @lesson1 = Lesson.new(user_id: 1, tutor_id: 5, day: Date.today+1.months, begin_hour: 10, finish_hour: 12, city_id: 2, subject_id: 1) 
+      @lesson1.save
   }
   
   # rspec-expectations config goes here. You can use an alternate

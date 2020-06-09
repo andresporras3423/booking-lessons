@@ -33,7 +33,7 @@ class SubjectsController < ApplicationController
     #   list of subjects
     # status::
     #   ok
-    def get_subjects
+    def get_student_subjects
         subjects = Hash.new
         list_subjects = Subject.all
         @user.lessons.each{|le| subjects[le.subject_id]=list_subjects.find(le.subject_id).name}

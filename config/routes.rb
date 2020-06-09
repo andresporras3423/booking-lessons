@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   post  '/users/create',  to: 'users#create'
   put  '/users/update',  to: 'users#update'
   put  '/users/update_password',  to: 'users#update_password'
-  put  '/users/update_subjects',  to: 'users#update_subjects'
   get  '/users/show_tutors',  to: 'users#show_tutors'
   get  '/users/show_tutors_by_lesson',  to: 'users#show_tutors_by_lesson'
   get  '/users/show_past_lessons',  to: 'users#show_past_lessons'
@@ -15,8 +14,9 @@ Rails.application.routes.draw do
 
   get  '/cities/show',  to: 'cities#show'
   get  '/countries/show',  to: 'countries#show'
+
   get  '/subjects/show',  to: 'subjects#show'
-  get  '/subjects/get_subjects',  to: 'subjects#get_subjects'
+  get  '/subjects/get_student_subjects',  to: 'subjects#get_student_subjects'
   get  '/subjects/get_tutor_subjects',  to: 'subjects#get_tutor_subjects'
   get  '/subjects/get_tutor_taught_subjects',  to: 'subjects#get_tutor_taught_subjects'
   
@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   get  '/tutors/show_past_lessons',  to: 'tutors#show_past_lessons'
   get  '/tutors/show_today_lessons',  to: 'tutors#show_today_lessons'
   get  '/tutors/show_future_lessons',  to: 'tutors#show_future_lessons'
+  put  '/tutors/update_subjects',  to: 'tutors#update_subjects'
 end

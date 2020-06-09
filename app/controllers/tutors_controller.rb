@@ -92,8 +92,13 @@ class TutorsController < ApplicationController
     def update_subjects
         sub_ids = params[:sub_ids]
         @user.userSubjects.each{|us| us.destroy}
-        user_subjects = sub_ids.split(",").map do |s_id|
-            UserSubject.create(user_id: @user.id, subject_id: s_id.to_i)
+        user_subjects = sub_ids.split(",").each do |s_id|
+            u1 = UserSubject.new(user_id: @user.id, subject_id: s_id.to_i)
+            unless u1.valid?
+                render json: {"error": "subject id not found"}, status: :not_found
+                return
+            end
+            u1.save
         end
         render json: JSON[{"status": "updated"}], status: :accepted
     end
