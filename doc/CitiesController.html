@@ -103,7 +103,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>frozen_string_literal: true</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -207,19 +218,19 @@
       <pre class="lines">
 
 
-15
-16
 17
 18
-19</pre>
+19
+20
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/cities_controller.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/cities_controller.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
-    <span class='id identifier rubyid_cities'>cities</span> <span class='op'>=</span> <span class='const'>City</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span> 
-    <span class='id identifier rubyid_cities_json'>cities_json</span> <span class='op'>=</span> <span class='id identifier rubyid_cities'>cities</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='const'>City_helper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_cod'>cod</span><span class='rparen'>)</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_cities_json'>cities_json</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+  <span class='id identifier rubyid_cities'>cities</span> <span class='op'>=</span> <span class='const'>City</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+  <span class='id identifier rubyid_cities_json'>cities_json</span> <span class='op'>=</span> <span class='id identifier rubyid_cities'>cities</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='const'>City_helper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_cod'>cod</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_cities_json'>cities_json</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -231,7 +242,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Jun  8 19:27:53 2020 by
+  Generated on Tue Jun  9 18:14:32 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.6.3).
 </div>

@@ -103,7 +103,18 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>frozen_string_literal: true</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -285,19 +296,19 @@
       <pre class="lines">
 
 
-67
-68
 69
 70
-71</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 69</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show_future_lessons'>show_future_lessons</span>
-    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
-    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>&gt;</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+  <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
+  <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span> <span class='op'>&gt;</span> <span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -356,19 +367,19 @@
       <pre class="lines">
 
 
-21
-22
 23
 24
-25</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show_past_lessons'>show_past_lessons</span>
-    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
-    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>&lt;</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+  <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
+  <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span> <span class='op'>&lt;</span> <span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -427,19 +438,19 @@
       <pre class="lines">
 
 
-44
-45
 46
 47
-48</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show_today_lessons'>show_today_lessons</span>
-    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
-    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>==</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+  <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_tutorLessons'>tutorLessons</span>
+  <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span> <span class='op'>==</span> <span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -501,25 +512,35 @@
       <pre class="lines">
 
 
-92
-93
 94
 95
 96
 97
 98
-99</pre>
+99
+100
+101
+102
+103
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/tutors_controller.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update_subjects'>update_subjects</span>
-    <span class='id identifier rubyid_sub_ids'>sub_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:sub_ids</span><span class='rbracket'>]</span>
-    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_userSubjects'>userSubjects</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_us'>us</span><span class='op'>|</span> <span class='id identifier rubyid_us'>us</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_user_subjects'>user_subjects</span> <span class='op'>=</span> <span class='id identifier rubyid_sub_ids'>sub_ids</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s_id'>s_id</span><span class='op'>|</span>
-        <span class='const'>UserSubject</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>user_id:</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>subject_id:</span> <span class='id identifier rubyid_s_id'>s_id</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sub_ids'>sub_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:sub_ids</span><span class='rbracket'>]</span>
+  <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_userSubjects'>userSubjects</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:destroy</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_user_subjects'>user_subjects</span> <span class='op'>=</span> <span class='id identifier rubyid_sub_ids'>sub_ids</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s_id'>s_id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_u1'>u1</span> <span class='op'>=</span> <span class='const'>UserSubject</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='label'>user_id:</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>subject_id:</span> <span class='id identifier rubyid_s_id'>s_id</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_u1'>u1</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+      <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>error</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>subject id not found</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:not_found</span>
+      <span class='kw'>return</span>
     <span class='kw'>end</span>
-    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='const'>JSON</span><span class='lbracket'>[</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>updated</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:accepted</span>
+    <span class='id identifier rubyid_u1'>u1</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='const'>JSON</span><span class='lbracket'>[</span><span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>updated</span><span class='tstring_end'>&#39;</span></span> <span class='rbrace'>}</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:accepted</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -531,7 +552,7 @@
 </div>
 
     <div id="footer">
-  Generated on Mon Jun  8 19:27:53 2020 by
+  Generated on Tue Jun  9 18:14:32 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.6.3).
 </div>
