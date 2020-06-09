@@ -1,0 +1,978 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: UsersController
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!UsersController.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (U)</a> &raquo;
+    
+    
+    <span class="title">UsersController</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: UsersController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::API</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">UsersController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controllers/users_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-instance_method" title="#create (instance method)">- (Object) <strong>create</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_future_lessons-instance_method" title="#show_future_lessons (instance method)">- (Object) <strong>show_future_lessons</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Show after today lessons for the current user (just students).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_past_lessons-instance_method" title="#show_past_lessons (instance method)">- (Object) <strong>show_past_lessons</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Show before today lessons for the current user (just students).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_today_lessons-instance_method" title="#show_today_lessons (instance method)">- (Object) <strong>show_today_lessons</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Show today lessons for the current user (just students).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_tutors-instance_method" title="#show_tutors (instance method)">- (Object) <strong>show_tutors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Show available tutors in user&#39;s city.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show_tutors_by_lesson-instance_method" title="#show_tutors_by_lesson (instance method)">- (Object) <strong>show_tutors_by_lesson</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Filter by subject the tutors in the city of current user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-instance_method" title="#update (instance method)">- (Object) <strong>update</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update parameter values of current user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_password-instance_method" title="#update_password (instance method)">- (Object) <strong>update_password</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Update password of current user.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new user</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>POST</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/create</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>name
+<dd>
+<p>User name, not null</p>
+</dd><dt>email
+<dd>
+<p>User email, not null, it has to be a valid email and unique</p>
+</dd><dt>role_id
+<dd>
+<p>id of the user role, not null, there are three roles, 1=student, 2=tutor
+and 3=administrator</p>
+</dd><dt>city_id
+<dd>
+<p>id of the user city, not null</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>User id, name, email, remember_token</p>
+</dd><dt>status
+<dd>
+<p>created</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
+    <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>name:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>email:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:email</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>password:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:password</span><span class='rbracket'>]</span><span class='comma'>,</span> 
+        <span class='label'>password_confirmation:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:password_confirmation</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>city_id:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:city_id</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>role_id:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:role_id</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+        <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_record_signup'>record_signup</span>
+        <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:id</span><span class='comma'>,</span> <span class='symbol'>:email</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='comma'>,</span> <span class='symbol'>:remember_token</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:created</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:conflict</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_future_lessons-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_future_lessons</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Show after today lessons for the current user (just students)</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>GET</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/show_future_lessons</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>list of lessons</p>
+</dd><dt>status
+<dd>
+<p>ok</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 218</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_future_lessons'>show_future_lessons</span>
+    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_lessons'>lessons</span>
+    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>&gt;</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_past_lessons-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_past_lessons</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Show before today lessons for the current user (just students)</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>GET</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/show_past_lessons</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>list of lessons</p>
+</dd><dt>status
+<dd>
+<p>ok</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 172</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_past_lessons'>show_past_lessons</span>
+    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_lessons'>lessons</span>
+    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>&lt;</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_today_lessons-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_today_lessons</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Show today lessons for the current user (just students)</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>GET</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/show_today_lessons</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>list of lessons</p>
+</dd><dt>status
+<dd>
+<p>ok</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_today_lessons'>show_today_lessons</span>
+    <span class='id identifier rubyid_lessons'>lessons</span> <span class='op'>=</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_lessons'>lessons</span>
+    <span class='id identifier rubyid_lessons_helper'>lessons_helper</span> <span class='op'>=</span> <span class='id identifier rubyid_lessons'>lessons</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_le'>le</span><span class='op'>|</span> <span class='id identifier rubyid_le'>le</span><span class='period'>.</span><span class='id identifier rubyid_day'>day</span><span class='op'>==</span><span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_today'>today</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_lessons_helper'>lessons_helper</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_tutors-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_tutors</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Show available tutors in user&#39;s city</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>GET</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/show_tutors</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<h2 id="label-list+tutors">list tutors</h2>
+
+<pre class="code ruby"><code class="ruby">id, name, email, name</code></pre>
+</dd><dt>status
+<dd>
+<p>ok</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_tutors'>show_tutors</span>
+    <span class='id identifier rubyid_tutors'>tutors</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_t'>t</span> <span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_role'>role</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tutor</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span><span class='op'>==</span><span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_tutors'>tutors</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:id</span><span class='comma'>,</span> <span class='symbol'>:email</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show_tutors_by_lesson-instance_method">
+  
+    - (<tt>Object</tt>) <strong>show_tutors_by_lesson</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Filter by subject the tutors in the city of current user</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>GET</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/show_tutors_by_lesson</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd><dt>subject_id
+<dd>
+<p>id of the subject to use for filtering tutors un user&#39;s city</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<h2 id="label-list+tutors">list tutors</h2>
+
+<pre class="code ruby"><code class="ruby">id, name, email, name</code></pre>
+</dd><dt>status
+<dd>
+<p>ok</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151
+152
+153</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_show_tutors_by_lesson'>show_tutors_by_lesson</span>
+    <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subject_id params: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:subject_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_tutors'>tutors</span> <span class='op'>=</span> <span class='const'>User</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_t'>t</span> <span class='op'>|</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_role'>role</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='op'>==</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tutor</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span><span class='op'>==</span><span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_userSubjects'>userSubjects</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_us'>us</span><span class='op'>|</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:subject_id</span><span class='rbracket'>]</span><span class='op'>==</span><span class='id identifier rubyid_us'>us</span><span class='period'>.</span><span class='id identifier rubyid_subject_id'>subject_id</span><span class='rbrace'>}</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='id identifier rubyid_tutors'>tutors</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:id</span><span class='comma'>,</span> <span class='symbol'>:email</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:ok</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update parameter values of current user</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>PUT</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/update</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>name
+<dd>
+<p>User name</p>
+</dd><dt>new_eail
+<dd>
+<p>New user email, it has to be a valid email and unique</p>
+</dd><dt>role_id
+<dd>
+<p>id of the user role, there are three roles, 1=student, 2=tutor and
+3=administrator</p>
+</dd><dt>city_id
+<dd>
+<p>id of the user city</p>
+</dd><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>User id, name, email</p>
+</dd><dt>status
+<dd>
+<p>accepted</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
+    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:name</span><span class='rbracket'>]</span>
+    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:new_email</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span> <span class='op'>:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:new_email</span><span class='rbracket'>]</span>
+    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:city_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_city_id'>city_id</span> <span class='op'>:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:city_id</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+        <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span>  <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:id</span><span class='comma'>,</span> <span class='symbol'>:email</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:accepted</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:conflict</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_password-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_password</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Update password of current user</p>
+
+<h2 id="label-HTTP_METHOD-3A">HTTP_METHOD:</h2>
+
+<p>PUT</p>
+
+<h2 id="label-Route-3A">Route:</h2>
+
+<p>/users/update_password</p>
+
+<h2 id="label-Headers-3A">Headers:</h2>
+<dl class="rdoc-list note-list"><dt>password
+<dd>
+<p>the user password must have at least 4 characters</p>
+</dd><dt>password_confirmation
+<dd>
+<p>it must have the same value of password</p>
+</dd><dt>email
+<dd>
+<p>current user email</p>
+</dd><dt>remember_token
+<dd>
+<p>current user remember_token</p>
+</dd></dl>
+
+<h2 id="label-Response-3A">Response:</h2>
+<dl class="rdoc-list note-list"><dt>render
+<dd>
+<p>User id, name, email, remember_token</p>
+</dd><dt>status
+<dd>
+<p>accepted</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/users_controller.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_password'>update_password</span>
+    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_password'>password</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:password</span><span class='rbracket'>]</span>
+    <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_password_confirmation'>password_confirmation</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:password_confirmation</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span>
+        <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_record_signup'>record_signup</span>
+        <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_as_json'>as_json</span><span class='lparen'>(</span><span class='label'>only:</span> <span class='lbracket'>[</span><span class='symbol'>:id</span><span class='comma'>,</span> <span class='symbol'>:email</span><span class='comma'>,</span> <span class='symbol'>:name</span><span class='comma'>,</span> <span class='symbol'>:remember_token</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:accepted</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='label'>json:</span> <span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:conflict</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Jun  8 19:27:53 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.6.3).
+</div>
+
+  </body>
+</html>

@@ -18,7 +18,13 @@ gem 'bcrypt', '~> 3.1.7'
 #gem 'bcrypt', '~> 3.1.2'
 gem 'devise'
 
+gem 'rdoc', '~> 4.2', '>= 4.2.2'
+
+gem 'yard', '~> 0.8.7.6'
+
 gem 'rails-erd'
+
+gem 'rspec_api_documentation'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

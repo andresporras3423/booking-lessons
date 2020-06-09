@@ -1,5 +1,20 @@
 class SessionsController < ApplicationController
-
+    # Login to generate a token
+    #
+    # == HTTP_METHOD:
+    #   POST
+    # == Route:
+    # /sessions/create
+    # == Headers:
+    # email::
+    #   email of the user
+    # password::
+    #   user's password
+    # == Response:
+    # render::
+    #   User's id, email, name, remember_token
+    # status::
+    #   ok
     def create
         user = User.find_by_email(params[:email])
         p "send password is #{params[:password]}"
@@ -11,32 +26,30 @@ class SessionsController < ApplicationController
             head(:unauthorized)
         end
     end
-
+    #destroy token of the logged user
+    #
+    # == HTTP_METHOD:
+    #   DELETE
+    # == Route:
+    # /sessions/destroy
+    # == Headers:
+    # email::
+    #   current user email
+    # remember_token::
+    #   current user remember_token
+    # == Response:
+    # render::
+    #   User's id, email, name
+    # status::
+    #   accepted
     def destroy
         user = User.find_by_email(params[:email])
         if user&.authenticated?(params[:remember_token])
             user.remember_token=nil
             user.save
-            render json: user.as_json(only: [:id, :email, :name]), status: :ok
+            render json: user.as_json(only: [:id, :email, :name]), status: :accepted
         else
             head(:not_found)
         end
     end
-
-    # def create
-    #     user = User.find_by_name(params[:name])
-    #     if user&.authenticate(params[:password])
-    #       remember user
-    #       redirect_to '/'
-    #     else
-    #       flash.now[:danger] = 'Invalid email/password combination'
-    #       render 'new'
-    #     end
-    #   end
-    
-    #   def destroy
-    #     log_out if logged_in?
-    #     redirect_to '/login'
-    #   end
-
 end
