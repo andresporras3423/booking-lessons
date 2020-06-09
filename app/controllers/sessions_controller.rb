@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     #   ok
     def create
         user = User.find_by_email(params[:email])
-        if user.authenticate(params[:password])
+        if user && user.authenticate(params[:password])
             user.record_signup
             user.save
             render json: user.as_json(only: [:id, :email, :name, :remember_token]), status: :created

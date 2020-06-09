@@ -34,7 +34,6 @@ class LessonsController < ApplicationController
             city_id: @user.city_id)
         if lesson.valid?
             lesson.save
-            
             render json: JSON[lesson_info(lesson)] , status: :created
         else
             render json: lesson.errors.messages, status: :conflict
