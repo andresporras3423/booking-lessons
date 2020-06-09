@@ -1,23 +1,21 @@
-# require 'rails_helper'
-# require 'rspec_api_documentation/dsl'
+# spec/controllers/articles_controller_spec.rb
+require 'rails_helper'
 
-# resource "users" do
-#   post "/users/create" do
-#     example "Create a new user" do
-#         request = {
-#               email: 'a5@a5.com',
-#               name: "a5",
-#               password: "12345678",
-#               role_id: 1,
-#               city_id: 1,
-#               password_confirmation: "12345678"
-#           }
-#           # It's also possible to extract types of parameters when you pass data through `do_request` method.
-#           do_request(request)
- 
-#       do_request
-#       expect(status).to eq 200
-#     end
-#   end
-# end
-#post  '/users/create',  to: 'users#create'
+RSpec.describe SessionsController, type: :controller do
+
+  describe "POST #create" do
+    before(:each) do
+        post :create, params: {email: "a1@a1.com", password: "12345678" }
+         @rt = JSON.parse(response.body)["remember_token"]
+      end
+    it "returns http created after create a new session" do
+      expect(response).to have_http_status(:created)
+    end
+
+    it "returns http ok after destroying current session" do
+        delete :destroy, params: {email: "a1@a1.com", remember_token: @rt}
+      expect(response).to have_http_status(:accepted)
+    end
+
+  end
+end

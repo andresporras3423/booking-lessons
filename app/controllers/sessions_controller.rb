@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+    before_action :restrict_access, only: %i[destroy]
+
     # Login to generate a token
     #
     # == HTTP_METHOD:
@@ -17,7 +19,6 @@ class SessionsController < ApplicationController
     #   ok
     def create
         user = User.find_by_email(params[:email])
-        p "send password is #{params[:password]}"
         if user.authenticate(params[:password])
             user.record_signup
             user.save
@@ -43,13 +44,7 @@ class SessionsController < ApplicationController
     # status::
     #   accepted
     def destroy
-        user = User.find_by_email(params[:email])
-        if user&.authenticated?(params[:remember_token])
-            user.remember_token=nil
-            user.save
-            render json: user.as_json(only: [:id, :email, :name]), status: :accepted
-        else
-            head(:not_found)
-        end
+        @user.update(remember_token:nil)
+        render json: @user.errors.messages, status: :accepted
     end
 end

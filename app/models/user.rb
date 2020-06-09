@@ -10,8 +10,8 @@ class User < ApplicationRecord
     validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-    validates :password, length: { minimum:4}
     validates :name, length: { minimum:1}
+    validates :password, presence: true, length: { minimum: 4 }, on: :create
 
     def tutorLessons
       Lesson.all.select{|le| le.tutor_id==self.id}
