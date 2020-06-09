@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe CountriesController, type: :controller do
 
-  describe "CountriesController actions" do
+  describe "#show" do
     it "return ok status" do
         get :show
         expect(response).to have_http_status(:ok)

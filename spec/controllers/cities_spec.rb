@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe CitiesController, type: :controller do
 
-  describe "CitiesController actions" do
+  describe "#show" do
     it "return ok status" do
         get :show
         expect(response).to have_http_status(:ok)

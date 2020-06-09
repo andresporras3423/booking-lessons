@@ -1,7 +1,7 @@
 # spec/controllers/users_controller.rb
 require 'rails_helper'
 
-RSpec.describe TutorsController, type: :controller do
+RSpec.describe UsersController, type: :controller do
   before(:each) do
     @controller = SessionsController.new
     post :create, params: {email: "b1@b1.com", password: "asdf1234" }
