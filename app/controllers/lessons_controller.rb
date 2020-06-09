@@ -76,11 +76,11 @@ class LessonsController < ApplicationController
             elsif lesson.user_id!=@user.id && @user.role_id!=Role.all.find_by_name("administrator").id
                 render json: JSON[{"error": "you are not authorized to do this action"}], status: :unauthorized
             else
-                lesson.tutor_id = params[:tutor_id].nil? ? lesson.tutor_id : params[:tutor_id]
-                lesson.day = params[:day].nil? ? lesson.day : params[:day]
-                lesson.begin_hour = params[:begin_hour].nil? ? lesson.begin_hour : params[:begin_hour]
-                lesson.finish_hour = params[:finish_hour].nil? ? lesson.finish_hour : params[:finish_hour]
-                lesson.subject_id = params[:subject_id].nil? ? lesson.subject_id : params[:subject_id]
+                lesson.tutor_id = params[:tutor_id].nil? ? lesson.tutor_id : params[:tutor_id].to_i
+                lesson.day = params[:day].nil? ? lesson.day : params[:day].to_i
+                lesson.begin_hour = params[:begin_hour].nil? ? lesson.begin_hour : params[:begin_hour].to_i
+                lesson.finish_hour = params[:finish_hour].nil? ? lesson.finish_hour : params[:finish_hour].to_i
+                lesson.subject_id = params[:subject_id].nil? ? lesson.subject_id : params[:subject_id].to_i
                 lesson.city_id = @user.city_id
                 if lesson.valid?
                     lesson.save
