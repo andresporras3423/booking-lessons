@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   put  '/users/update',  to: 'users#update'
   put  '/users/update_password',  to: 'users#update_password'
   get  '/users/show_tutors',  to: 'users#show_tutors'
-  get  '/users/show_tutors_by_lesson',  to: 'users#show_tutors_by_lesson'
+  get  '/users/show_tutors_by_subject',  to: 'users#show_tutors_by_subject'
   get  '/users/show_past_lessons',  to: 'users#show_past_lessons'
   get  '/users/show_today_lessons',  to: 'users#show_today_lessons'
   get  '/users/show_future_lessons',  to: 'users#show_future_lessons'

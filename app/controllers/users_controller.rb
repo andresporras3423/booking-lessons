@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :restrict_access, only: %i[update show_tutors show_tutors_by_lesson show_past_lessons show_today_lessons show_future_lessons update_password]
+    before_action :restrict_access, only: %i[update show_tutors show_tutors_by_subject show_past_lessons show_today_lessons show_future_lessons update_password]
     
     # Create a new user
     #
@@ -131,7 +131,7 @@ class UsersController < ApplicationController
     # == HTTP_METHOD:
     # GET
     # == Route:
-    # /users/show_tutors_by_lesson
+    # /users/show_tutors_by_subject
     # == Headers:
     # email::
     #   current user email
@@ -146,9 +146,8 @@ class UsersController < ApplicationController
     #     id, name, email, name
     # status::
     #   ok
-    def show_tutors_by_lesson
-        p "subject_id params: #{params[:subject_id]}"
-        tutors = User.all.select{|t | t.role.name=='tutor' && t.city_id==@user.city_id && t.userSubjects.any?{|us| params[:subject_id]==us.subject_id}}
+    def show_tutors_by_subject
+        tutors = User.all.select{|t | t.role.name=='tutor' && t.city_id==@user.city_id && t.userSubjects.any?{|us| params[:subject_id].to_i==us.subject_id}}
         render json: tutors.as_json(only: [:id, :email, :name]), status: :ok
     end
 
