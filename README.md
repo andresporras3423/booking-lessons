@@ -45,9 +45,8 @@ Backend project. API for a booking lessons app
 
 ## Project Presentation (VIDEO)
 
-[![Project presentation](./app/assets/images/video-screenshot.png)](https://www.loom.com/share/f8e24c7dbe3b42a9b6872b88d4d1fed1)
 
-[Project Presentation](https://www.loom.com/share/f8e24c7dbe3b42a9b6872b88d4d1fed1)
+[Project Presentation](https://www.loom.com/share/2a626bff201a44658cf9abde380708f7)
 
 # Tools
 
