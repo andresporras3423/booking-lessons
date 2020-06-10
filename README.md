@@ -3,7 +3,7 @@
 Backend project. API for a booking lessons app
 
 
-![screenshot](./app/assets/images/screenshot.png)
+![screenshot](screenshot.png)
 
 # What it does
 
