@@ -37,18 +37,11 @@ class Lesson < ApplicationRecord
     end
   end
 
-  # def is_future_date
-  #     if day<Date.today
-  #         errors.add(:base, message: "lesson must occur in the future")
-  #     end
-  # end
-
   def no_overlap_tutor_lesson
     tutor = User.all.find(tutor_id)
     return if tutor.nil?
 
     throw_error = tutor.tutorLessons.any? { |le| le.day.to_date == day.to_date && ((le.begin_hour >= begin_hour && le.begin_hour < finish_hour) || (le.finish_hour <= finish_hour && le.finish_hour > begin_hour)) && le.id != id }
-    # p "passed validation was #{throw_error}"
     if throw_error
       errors.add(:base, message: "lesson cannot overlap with another tutor's lesson")
     end
@@ -59,7 +52,6 @@ class Lesson < ApplicationRecord
     return if student.nil?
 
     throw_error = student.lessons.any? { |le| le.day.to_date == day.to_date && ((le.begin_hour >= begin_hour && le.begin_hour < finish_hour) || (le.finish_hour <= finish_hour && le.finish_hour > begin_hour)) && le.id != id }
-    # p "passed validation was #{throw_error}"
     if throw_error
       errors.add(:base, message: "lesson cannot overlap with another students's lesson")
     end
