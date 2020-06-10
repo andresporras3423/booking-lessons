@@ -52,6 +52,7 @@ Backend project. API for a booking lessons app
 
 - Ruby
 - Ruby on Rails
+- SQL
 - Heroku
 
 #### and deployed to GitHub
