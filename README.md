@@ -82,44 +82,4 @@ Special thanks to Microverse, for this learning opportunity.
 Give a ⭐️ if you like this project!
 
 ## Enjoy!
-#  article project
 
-Ruby on Rails Microverse Capstone Project By Oscar Russi
-
-## Usage
-
-This project has the basic features of the article posting websites 
-
-![screenshot](./app/assets/images/screenshot.png)
-
-# live demo
-
-[Live Demo](https://blueberry-custard-86240.herokuapp.com)
-
-## Project Presentation (VIDEO)
-
-[![Project presentation](./app/assets/images/video-screenshot.png)](https://www.loom.com/share/f8e24c7dbe3b42a9b6872b88d4d1fed1)
-
-[Project Presentation](https://www.loom.com/share/f8e24c7dbe3b42a9b6872b88d4d1fed1)
-
-
-## Authors
-
-**Oscar Russi**
-- Github: [@andresporras3423](https://github.com/andresporras3423/)
-- Linkedin: [Oscar Russi](https://www.linkedin.com/in/oscar-andres-russi-porras/)
-- Twitter: [@OscarRussi1](https://twitter.com/OscarRussi1)
-
-## � Contributing
-
-This is a project for educational purposes only. We are not accepting contributions.
-
-## Attributions and Credit
-
-Special thanks to Microverse, for this learning opportunity. 
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Enjoy!
