@@ -5,9 +5,6 @@ require 'rails_helper'
 RSpec.describe Role, type: :model do
   context 'role model creation' do
     let(:r1) { Role.new(name: 'manager') }
-    # before(:each) do
-    #   r1.save
-    # end
     it 'valid role' do
       expect(r1.valid?).to eq(true)
     end

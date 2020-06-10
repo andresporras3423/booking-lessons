@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# spec/controllers/users_controller.rb
 require 'rails_helper'
 
 RSpec.describe TutorsController, type: :controller do

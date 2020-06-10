@@ -6,7 +6,6 @@ RSpec.describe Subject, type: :model do
   context 'Subject model creation' do
     let(:s1) { Subject.new(name: 'programming') }
     it 'valid Subject' do
-      # p Subject.all
       expect(s1.valid?).to eq(true)
     end
 
