@@ -22,7 +22,7 @@ gem 'devise'
 
 gem 'rdoc', '~> 4.2', '>= 4.2.2'
 
-gem 'yard', '~> 0.8.7.6'
+gem 'yard', '~> 0.9.20'
 
 gem 'rails-erd'
 
