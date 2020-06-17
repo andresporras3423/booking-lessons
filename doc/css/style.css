@@ -337,4 +337,4 @@ pre.code .rubyid_backref,
 pre.code .rubyid_nth_ref { color: #6D79DE; }
 pre.code .regexp, .dregexp { color: #036A07; }
 pre.code a { border-bottom: 1px dotted #bbf; }
-.image-size {width: 800px; height: 800px;}
+.image-size {width: 800px; height: 400px;}
