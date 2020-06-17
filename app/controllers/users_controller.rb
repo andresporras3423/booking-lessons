@@ -2,7 +2,10 @@
 
 class UsersController < ApplicationController
   before_action :restrict_access, only: %i[update show_tutors show_tutors_by_subject show_past_lessons show_today_lessons show_future_lessons update_password]
-
+  # show link to repository and documentation
+  def index
+    render json: {"API documentation": "http://andresporres.000webhostapp.com/booking-lessons/_index.html","Github repository": "https://github.com/andresporras3423/booking-lessons"}, status: :ok
+  end
   # Create a new user
   #
   # == HTTP_METHOD:
