@@ -21,7 +21,7 @@ Backend project. API for a booking lessons app
 
 # API Documentation
 
-[API Documentation](http://andresporres.000webhostapp.com/booking-lessons/doc/_index.html)
+[API Documentation](http://andresporres.000webhostapp.com/booking-lessons/_index.html)
 
 # How to run this project
 
