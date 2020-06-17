@@ -21,7 +21,7 @@ Backend project. API for a booking lessons app
 
 # API Documentation
 
-[API Documentation](http://andresporres.000webhostapp.com/booking-lessons/doc/_index.html)
+[API Documentation](http://andresporres.000webhostapp.com/booking-lessons/_index.html)
 
 # How to run this project
 
@@ -41,7 +41,7 @@ Backend project. API for a booking lessons app
 
 # live demo
 
-[Live Demo](https://still-island-68637.herokuapp.com/countries/show)
+[Live Demo](https://still-island-68637.herokuapp.com)
 
 ## Project Presentation (VIDEO)
 
