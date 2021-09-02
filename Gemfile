@@ -20,7 +20,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'bcrypt', '~> 3.1.2'
 gem 'devise'
 
-gem 'rdoc', '~> 4.2', '>= 4.2.2'
+gem 'rdoc', '~> 6.3'
 
 gem 'yard', '~> 0.8.7.6'
 
